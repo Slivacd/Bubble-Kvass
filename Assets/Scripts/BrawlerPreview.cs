@@ -11,18 +11,21 @@ public class BrawlerPreview : MonoBehaviour
     [SerializeField] private Image _skinImage;
     [SerializeField] private TextMeshProUGUI _name, _description;
     [SerializeField] private TextMeshProUGUI _skinName;
+    [SerializeField] private TextMeshProUGUI _rarity;
     private Brawler _brawler;
     
     public void ShowPreview(Brawler brawler)
     {
         _brawler = brawler;
-        _name.text = brawler.Name;
+        _name.text = brawler.Skins[0].SkinName;
         _description.text = brawler.Description;
         _brawlerImage.sprite = brawler.Skins[PlayerData.Instance.BrawlersData[brawler.ID].SelectedSkin].Skin;
         bool unlocked = PlayerData.Instance.BrawlersData[brawler.ID].Unlocked;
         _selectBrawler.gameObject.SetActive(unlocked);
         _selectSkin.gameObject.SetActive(unlocked);
         _selectSkin.interactable = PlayerData.Instance.BrawlersData[brawler.ID].SkinUnlocked;
+        _rarity.text = brawler.Rarity;
+        _rarity.color = brawler.RarityColor;
     }
 
     public void OpenSkinPanel()
@@ -43,6 +46,7 @@ public class BrawlerPreview : MonoBehaviour
 
     public void SelectBrawler()
     {
+        PlayerData.Instance.Save.MainBrawlerID = _brawler.ID;
         GameData.Instance.ChangeMainBrawler(_brawler);
     }
 }

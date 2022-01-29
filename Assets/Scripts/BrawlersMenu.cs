@@ -35,9 +35,7 @@ public class BrawlersMenu : MonoBehaviour
     {
         for (int i = 0; i < _brawlersButton.Count; i++)
         {
-            _brawlersButton[i].Image.sprite = PlayerData.Instance.BrawlersData[i].Unlocked
-                ? GameData.Instance.Brawlers[i].UnlockedIcon
-                : GameData.Instance.Brawlers[i].LockedIcon;
+            _brawlersButton[i].Initialize(GameData.Instance.Brawlers[i]);
         }
 
         _count.text =

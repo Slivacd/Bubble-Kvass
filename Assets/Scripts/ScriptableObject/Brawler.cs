@@ -7,10 +7,9 @@ using UnityEngine;
 public class Brawler : ScriptableObject
 {
     public int ID;
-    public string Name;
     public string Description;
     public string Rarity;
-    public Sprite LockedIcon, UnlockedIcon;
+    public Color RarityColor;
     public BrawlerSkin[] Skins;
 }
 
@@ -19,5 +18,6 @@ public class BrawlerSkin
 {
     public string SkinName;
     public Sprite Skin;
+    public int Price;
 }
 

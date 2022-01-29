@@ -9,6 +9,7 @@ public class FallingGamePlayer : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private Slider _health;
     [SerializeField] private FallingGame _fallingGame;
+    [SerializeField] private Image _image;
     private bool _gameIsEnd;
     
     public void StartGame()
@@ -17,6 +18,7 @@ public class FallingGamePlayer : MonoBehaviour
         _health.value = 10;
         transform.position = new Vector2(0, transform.position.y);
         _gameIsEnd = false;
+        _image.sprite = GameData.Instance.Brawlers[PlayerData.Instance.Save.MainBrawlerID].Skins[PlayerData.Instance.BrawlersData[PlayerData.Instance.Save.MainBrawlerID].SelectedSkin].Skin;
     }
 
     void FixedUpdate()

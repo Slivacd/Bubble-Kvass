@@ -81,6 +81,8 @@ public class FallingGame : BattleModeBase
         StopCoroutine(_spawner);
         for (int i = 0; i < _enemies.Count; i++)
             Destroy(_enemies[i].gameObject);
+        PlayerData.Instance.Save.Coins += _coins;
+        PlayerData.Instance.Save.Gems += _gems;
         _enemies.Clear();
         _endPanel.SetActive(true);
     }

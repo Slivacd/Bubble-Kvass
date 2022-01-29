@@ -9,7 +9,7 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
-    [HideInInspector] public Data Save;
+    public Data Save;
     public Dictionary<int, BrawlerData> BrawlersData;
     private string _path;
 
@@ -76,9 +76,11 @@ public class Data
     public int AvatarID;
     public int BackgroundID;
     public int BoxesUnlocked;
+    public int MainBrawlerID;
     public string PlayersName;
     public int Gems, Coins;
     public BrawlerData[] Brawlers;
+    public int[] ShopAdCounter;
     public bool[] BrawlPassRewardClaimed;
     public bool[] Backgrounds;
 
@@ -88,8 +90,10 @@ public class Data
         BrawlPassRewardClaimed = new bool[GameData.Instance.BrawlPassRewards.Count];
         Backgrounds = new bool[GameData.Instance.Backgrounds.Length];
         Backgrounds[0] = true;
+        ShopAdCounter = new int[6];
         for (int i = 0; i < GameData.Instance.Brawlers.Values.Count(); i++)
             Brawlers[i] = new BrawlerData(GameData.Instance.Brawlers[i].ID);
+        Brawlers[0].Unlocked = true;
     }
 }
 

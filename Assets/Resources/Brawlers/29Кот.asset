@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43df80fc7fe44a647bc1a42ead256563, type: 3}
+  m_Name: "29\u041A\u043E\u0442"
+  m_EditorClassIdentifier: 
+  ID: 29
+  Description: "\u041D\u0435 \u0432 \u0441\u0430\u043F\u043E\u0433\u0430\u0445"
+  Rarity: "\u0418\u0437 \u0441\u0435\u043C\u0435\u0439\u0441\u0442\u0432\u0430 \u043C\u0438\u043B\u044B\u0445"
+  RarityColor: {r: 1, g: 0, b: 0, a: 1}
+  Skins:
+  - SkinName: "\u041A\u043E\u0442"
+    Skin: {fileID: 21300000, guid: 3e33422b679f4ae44be0a5cd88648020, type: 3}
+    Price: 0

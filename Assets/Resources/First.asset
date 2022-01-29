@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744c1c530dfb4013a110748872c7f236, type: 3}
   m_Name: First
   m_EditorClassIdentifier: 
-  _coinMin: 10
-  _coinMax: 20
-  _newBrawlerDropChance: 99
+  _coinMin: 2
+  _coinMax: 4
+  _gemMin: 1
+  _gemMax: 2
+  _newBrawlerDropChance: 15
+  _gemChance: 30
   Currency: 0
-  Price: 0
-  Prefab: {fileID: 2682335668866828389, guid: edbaa949bc8dc69459c4f6d468d4ce9b, type: 3}
+  Price: 5
+  Prefab: {fileID: 2682335668866828389, guid: 28445d92798357843a84b29ca3f0bdf7, type: 3}

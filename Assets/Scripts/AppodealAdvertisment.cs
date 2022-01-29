@@ -17,8 +17,8 @@ public class AppodealAdvertisment : IAdvertismentNetwork, IRewardedVideoAdListen
     public Action Reward { get; set; }
     public bool IsInterstitialReady => Appodeal.isLoaded(Appodeal.INTERSTITIAL);
     public bool IsRewardedReady => Appodeal.isLoaded(Appodeal.REWARDED_VIDEO);
-    private const string ANDROID_KEY = "a5d7a289cb4b5790b44c2fe55765b0c645b87c1bab11cf07",
-        IOS_KEY = "9499f9d9f7c222b674d4d9b8d735884fc9138e67c445b8bd";
+    private const string ANDROID_KEY = "eac867b001fba00bd2bc0f3b41b80a9d794b555f3935df94",
+        IOS_KEY = "1721791ded3d93ae2b4bd6b6d9dffe18d101e75f0f96ee10";
 
     public void Initialize()
     {
